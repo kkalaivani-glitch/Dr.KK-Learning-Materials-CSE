@@ -19,7 +19,7 @@ Personal academic website for Dr. K. Kalaivani, showcasing Computer Science Engi
 
 ## Live Website
 
-Visit the website at: [GitHub Pages URL will be here]
+Visit the website at: https://kkalaivani-glitch.github.io/Dr.KK-Learning-Materials-CSE/
 
 ## Author
 
