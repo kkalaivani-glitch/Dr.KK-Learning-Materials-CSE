@@ -265,6 +265,165 @@ html {
     background: linear-gradient(135deg, #f8bbd0 0%, #f06292 50%, #e91e63 100%);
 }
 
+.materials-section {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffe0b2 50%, #ffcc80 100%);
+    padding: 80px 20px;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid #ff9800;
+    color: #ff9800;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #ff9800;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+}
+
+/* Materials Grid */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.material-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.material-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.material-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.material-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.material-header h3 {
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.exam-type {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.exam-type.internal {
+    background: rgba(76, 175, 80, 0.9);
+}
+
+.exam-type.assignment {
+    background: rgba(33, 150, 243, 0.9);
+}
+
+.material-body {
+    padding: 1.5rem;
+}
+
+.exam-details {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.exam-details p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.exam-details strong {
+    color: #333;
+}
+
+.question-preview {
+    margin: 1.5rem 0;
+}
+
+.question-preview h4 {
+    color: #667eea;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.question-preview ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.question-preview li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #666;
+    line-height: 1.6;
+}
+
+.question-preview li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.download-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
 .about-section {
     background: linear-gradient(135deg, #e1bee7 0%, #ba68c8 50%, #8e24aa 100%);
     color: white;

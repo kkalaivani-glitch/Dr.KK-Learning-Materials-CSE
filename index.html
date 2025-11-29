@@ -21,6 +21,7 @@
                 <li><a href="#networks">Computer Networks</a></li>
                 <li><a href="#oops">OOP</a></li>
                 <li><a href="#ai">AI/ML</a></li>
+                <li><a href="#materials">Question Papers</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -272,6 +273,180 @@
                     <div class="card-icon">🎲</div>
                     <h3>Unit 4</h3>
                     <p>Advanced Topics - NLP, Computer Vision, Reinforcement Learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Question Papers & Materials Section -->
+    <section id="materials" class="subject-section materials-section">
+        <div class="container">
+            <h2 class="section-title">📝 Question Papers & Study Materials</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterMaterials('all')">All</button>
+                <button class="filter-btn" onclick="filterMaterials('internal')">Internal Exams</button>
+                <button class="filter-btn" onclick="filterMaterials('semester')">Semester Exams</button>
+                <button class="filter-btn" onclick="filterMaterials('assignment')">Assignments</button>
+            </div>
+
+            <!-- Question Papers Grid -->
+            <div class="materials-grid">
+                <!-- Cloud Computing Papers -->
+                <div class="material-card" data-category="semester">
+                    <div class="material-header">
+                        <div class="material-icon">☁️</div>
+                        <h3>Cloud Computing</h3>
+                        <span class="exam-type">Semester Exam</span>
+                    </div>
+                    <div class="material-body">
+                        <div class="exam-details">
+                            <p><strong>Course Code:</strong> CS401</p>
+                            <p><strong>Duration:</strong> 3 Hours</p>
+                            <p><strong>Max Marks:</strong> 100</p>
+                            <p><strong>Semester:</strong> 4th (B.Tech CSE)</p>
+                        </div>
+                        <div class="question-preview">
+                            <h4>Sample Questions:</h4>
+                            <ul>
+                                <li>PART-A: Define Cloud Computing and its service models</li>
+                                <li>PART-B: Explain Virtualization in Cloud Architecture</li>
+                                <li>PART-C: Case Study on AWS/Azure Implementation</li>
+                            </ul>
+                        </div>
+                        <button class="download-btn" onclick="alert('Question paper download feature')">📥 Download PDF</button>
+                    </div>
+                </div>
+
+                <!-- DBMS Papers -->
+                <div class="material-card" data-category="internal">
+                    <div class="material-header">
+                        <div class="material-icon">🗄️</div>
+                        <h3>Database Management Systems</h3>
+                        <span class="exam-type internal">Internal Exam</span>
+                    </div>
+                    <div class="material-body">
+                        <div class="exam-details">
+                            <p><strong>Course Code:</strong> CS301</p>
+                            <p><strong>Duration:</strong> 1.5 Hours</p>
+                            <p><strong>Max Marks:</strong> 50</p>
+                            <p><strong>Semester:</strong> 3rd (B.Tech CSE)</p>
+                        </div>
+                        <div class="question-preview">
+                            <h4>Sample Questions:</h4>
+                            <ul>
+                                <li>Write SQL queries for given database schema</li>
+                                <li>Explain Normalization with examples (1NF to 3NF)</li>
+                                <li>Design ER Diagram for Library Management System</li>
+                            </ul>
+                        </div>
+                        <button class="download-btn" onclick="alert('Question paper download feature')">📥 Download PDF</button>
+                    </div>
+                </div>
+
+                <!-- Algorithms Papers -->
+                <div class="material-card" data-category="semester">
+                    <div class="material-header">
+                        <div class="material-icon">🧮</div>
+                        <h3>Design & Analysis of Algorithms</h3>
+                        <span class="exam-type">Semester Exam</span>
+                    </div>
+                    <div class="material-body">
+                        <div class="exam-details">
+                            <p><strong>Course Code:</strong> CS302</p>
+                            <p><strong>Duration:</strong> 3 Hours</p>
+                            <p><strong>Max Marks:</strong> 100</p>
+                            <p><strong>Semester:</strong> 3rd (B.Tech CSE)</p>
+                        </div>
+                        <div class="question-preview">
+                            <h4>Sample Questions:</h4>
+                            <ul>
+                                <li>Analyze time complexity of given algorithms</li>
+                                <li>Implement Divide and Conquer approach</li>
+                                <li>Compare Greedy vs Dynamic Programming</li>
+                            </ul>
+                        </div>
+                        <button class="download-btn" onclick="alert('Question paper download feature')">📥 Download PDF</button>
+                    </div>
+                </div>
+
+                <!-- Data Structures Assignment -->
+                <div class="material-card" data-category="assignment">
+                    <div class="material-header">
+                        <div class="material-icon">📊</div>
+                        <h3>Data Structures</h3>
+                        <span class="exam-type assignment">Assignment</span>
+                    </div>
+                    <div class="material-body">
+                        <div class="exam-details">
+                            <p><strong>Course Code:</strong> CS201</p>
+                            <p><strong>Submission:</strong> 2 Weeks</p>
+                            <p><strong>Max Marks:</strong> 25</p>
+                            <p><strong>Semester:</strong> 2nd (B.Tech CSE)</p>
+                        </div>
+                        <div class="question-preview">
+                            <h4>Assignment Topics:</h4>
+                            <ul>
+                                <li>Implement Stack using Array and Linked List</li>
+                                <li>Binary Search Tree operations</li>
+                                <li>Graph traversal algorithms (BFS & DFS)</li>
+                            </ul>
+                        </div>
+                        <button class="download-btn" onclick="alert('Assignment download feature')">📥 Download PDF</button>
+                    </div>
+                </div>
+
+                <!-- Operating Systems Papers -->
+                <div class="material-card" data-category="internal">
+                    <div class="material-header">
+                        <div class="material-icon">🖥️</div>
+                        <h3>Operating Systems</h3>
+                        <span class="exam-type internal">Internal Exam</span>
+                    </div>
+                    <div class="material-body">
+                        <div class="exam-details">
+                            <p><strong>Course Code:</strong> CS303</p>
+                            <p><strong>Duration:</strong> 1.5 Hours</p>
+                            <p><strong>Max Marks:</strong> 50</p>
+                            <p><strong>Semester:</strong> 3rd (B.Tech CSE)</p>
+                        </div>
+                        <div class="question-preview">
+                            <h4>Sample Questions:</h4>
+                            <ul>
+                                <li>Explain Process Scheduling Algorithms</li>
+                                <li>Page Replacement Algorithms with examples</li>
+                                <li>Banker's Algorithm for Deadlock Avoidance</li>
+                            </ul>
+                        </div>
+                        <button class="download-btn" onclick="alert('Question paper download feature')">📥 Download PDF</button>
+                    </div>
+                </div>
+
+                <!-- Computer Networks Papers -->
+                <div class="material-card" data-category="semester">
+                    <div class="material-header">
+                        <div class="material-icon">🌐</div>
+                        <h3>Computer Networks</h3>
+                        <span class="exam-type">Semester Exam</span>
+                    </div>
+                    <div class="material-body">
+                        <div class="exam-details">
+                            <p><strong>Course Code:</strong> CS402</p>
+                            <p><strong>Duration:</strong> 3 Hours</p>
+                            <p><strong>Max Marks:</strong> 100</p>
+                            <p><strong>Semester:</strong> 4th (B.Tech CSE)</p>
+                        </div>
+                        <div class="question-preview">
+                            <h4>Sample Questions:</h4>
+                            <ul>
+                                <li>Explain OSI Model with all layers</li>
+                                <li>TCP vs UDP - Compare and contrast</li>
+                                <li>Subnetting and IP Addressing problems</li>
+                            </ul>
+                        </div>
+                        <button class="download-btn" onclick="alert('Question paper download feature')">📥 Download PDF</button>
+                    </div>
                 </div>
             </div>
         </div>
