@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Question Paper - Cloud Computing | Dr. K. Kalaivani</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .question-paper {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .university-name {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .college-name {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .exam-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .exam-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+
+        .detail-label {
+            font-weight: bold;
+        }
+
+        .instructions {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .instructions h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            font-size: 12px;
+        }
+
+        .instructions li {
+            margin: 5px 0;
+        }
+
+        .part-section {
+            margin: 25px 0;
+            page-break-inside: avoid;
+        }
+
+        .part-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .question {
+            margin: 15px 0;
+            padding: 10px;
+            border-left: 3px solid #667eea;
+            background: #f9f9ff;
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .question-number {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .question-marks {
+            display: flex;
+            gap: 15px;
+            font-size: 11px;
+        }
+
+        .marks {
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+        }
+
+        .bloom-level {
+            background: #4caf50;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .question-text {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .sub-questions {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .sub-question {
+            margin: 8px 0;
+            padding: 8px;
+            background: white;
+            border-left: 2px solid #4caf50;
+        }
+
+        .marks-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 12px;
+        }
+
+        .marks-table th,
+        .marks-table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .marks-table th {
+            background: #667eea;
+            color: white;
+        }
+
+        .bloom-legend {
+            margin: 20px 0;
+            padding: 15px;
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+
+        .bloom-legend h4 {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .bloom-legend ul {
+            list-style: none;
+            font-size: 11px;
+        }
+
+        .bloom-legend li {
+            margin: 5px 0;
+            padding: 5px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        .bloom-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            color: white;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .bt1 { background: #2196f3; }
+        .bt2 { background: #03a9f4; }
+        .bt3 { background: #00bcd4; }
+        .bt4 { background: #009688; }
+        .bt5 { background: #4caf50; }
+        .bt6 { background: #8bc34a; }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .question-paper {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 11px;
+            color: #666;
+        }
+
+        .or-separator {
+            text-align: center;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #667eea;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            background: #764ba2;
+        }
+
+        @media print {
+            .back-link {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="question-paper">
+        <!-- Header -->
+        <div class="header">
+            <div class="university-name">XYZ University</div>
+            <div class="college-name">Department of Computer Science Engineering</div>
+            <div class="exam-title">End Semester Examination - November 2025</div>
+        </div>
+
+        <!-- Exam Details -->
+        <div class="exam-details">
+            <div class="detail-item">
+                <span class="detail-label">Course Code:</span>
+                <span>CS401</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Course Name:</span>
+                <span>Cloud Computing</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Semester:</span>
+                <span>IV (B.Tech CSE)</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Duration:</span>
+                <span>3 Hours</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Maximum Marks:</span>
+                <span>100</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Date:</span>
+                <span>29-11-2025</span>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h3>Instructions to Candidates:</h3>
+            <ol>
+                <li>Answer ALL questions from PART-A (Compulsory)</li>
+                <li>Answer any FOUR questions from PART-B</li>
+                <li>Answer any TWO questions from PART-C</li>
+                <li>All parts of a question should be answered consecutively</li>
+                <li>Figures to the right indicate full marks</li>
+                <li>Bloom's Taxonomy (BT) level is indicated for each question</li>
+                <li>Use of calculators is permitted</li>
+            </ol>
+        </div>
+
+        <!-- Bloom's Taxonomy Legend -->
+        <div class="bloom-legend">
+            <h4>Bloom's Taxonomy Levels:</h4>
+            <ul>
+                <li><span class="bloom-tag bt1">BT1</span> Remember - Recall facts and basic concepts</li>
+                <li><span class="bloom-tag bt2">BT2</span> Understand - Explain ideas or concepts</li>
+                <li><span class="bloom-tag bt3">BT3</span> Apply - Use information in new situations</li>
+                <li><span class="bloom-tag bt4">BT4</span> Analyze - Draw connections among ideas</li>
+                <li><span class="bloom-tag bt5">BT5</span> Evaluate - Justify a stand or decision</li>
+                <li><span class="bloom-tag bt6">BT6</span> Create - Produce new or original work</li>
+            </ul>
+        </div>
+
+        <!-- Marks Distribution Table -->
+        <table class="marks-table">
+            <thead>
+                <tr>
+                    <th>Part</th>
+                    <th>Question Type</th>
+                    <th>No. of Questions</th>
+                    <th>Marks per Question</th>
+                    <th>Total Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>Short Answer</td>
+                    <td>10 (All Compulsory)</td>
+                    <td>2</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>Descriptive</td>
+                    <td>4 out of 6</td>
+                    <td>10</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>Case Study/Analysis</td>
+                    <td>2 out of 4</td>
+                    <td>20</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td colspan="4"><strong>Total</strong></td>
+                    <td><strong>100</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- PART A -->
+        <div class="part-section">
+            <div class="part-header">PART - A (Short Answer Questions - 10 × 2 = 20 Marks)</div>
+            <p style="font-size: 12px; margin-bottom: 15px;"><em>Answer ALL questions. Each question carries 2 marks.</em></p>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">1.</span>
+                    <div class="question-marks">
+                        <span class="marks">2 Marks</span>
+                        <span class="bloom-level bt1">BT1</span>
+                    </div>
+                </div>
+                <div class="question-text">Define Cloud Computing and list its essential characteristics.</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">2.</span>
+                    <div class="question-marks">
+                        <span class="marks">2 Marks</span>
+                        <span class="bloom-level bt1">BT1</span>
+                    </div>
+                </div>
+                <div class="question-text">What are the three main service models in Cloud Computing?</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">3.</span>
+                    <div class="question-marks">
+                        <span class="marks">2 Marks</span>
+                        <span class="bloom-level bt2">BT2</span>
+                    </div>
+                </div>
+                <div class="question-text">Differentiate between Public Cloud and Private Cloud.</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">4.</span>
+                    <div class="question-marks">
+                        <span class="marks">2 Marks</span>
+                        <span class="bloom-level bt1">BT1</span>
+                    </div>
+                </div>
+                <div class="question-text">List any four advantages of Cloud Computing.</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">5.</span>
+                    <div class="question-marks">
+                        <span class="marks">2 Marks</span>
+                        <span class="bloom-level bt2">BT2</span>
+                    </div>
+                </div>
+                <div class="question-text">Explain the concept of Virtualization in Cloud Computing.</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">6.</span>
+                    <div class="question-marks">
+                        <span class="marks">2 Marks</span>
+                        <span class="bloom-level bt1">BT1</span>
+                    </div>
+                </div>
+                <div class="question-text">What is a Hypervisor? Name its types.</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">7.</span>
+                    <div class="question-marks">
+                        <span class="marks">2 Marks</span>
+                        <span class="bloom-level bt2">BT2</span>
+                    </div>
+                </div>
+                <div class="question-text">Distinguish between SaaS and PaaS with examples.</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">8.</span>
+                    <div class="question-marks">
+                        <span class="marks">2 Marks</span>
+                        <span class="bloom-level bt1">BT1</span>
+                    </div>
+                </div>
+                <div class="question-text">Define Multi-tenancy in Cloud Computing.</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">9.</span>
+                    <div class="question-marks">
+                        <span class="marks">2 Marks</span>
+                        <span class="bloom-level bt2">BT2</span>
+                    </div>
+                </div>
+                <div class="question-text">Explain the role of Load Balancing in Cloud.</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">10.</span>
+                    <div class="question-marks">
+                        <span class="marks">2 Marks</span>
+                        <span class="bloom-level bt1">BT1</span>
+                    </div>
+                </div>
+                <div class="question-text">What are the main security challenges in Cloud Computing?</div>
+            </div>
+        </div>
+
+        <!-- PART B -->
+        <div class="part-section">
+            <div class="part-header">PART - B (Descriptive Questions - 4 × 10 = 40 Marks)</div>
+            <p style="font-size: 12px; margin-bottom: 15px;"><em>Answer any FOUR questions. Each question carries 10 marks.</em></p>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">11. (a)</span>
+                    <div class="question-marks">
+                        <span class="marks">5 Marks</span>
+                        <span class="bloom-level bt3">BT3</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Describe the architecture of Cloud Computing with a neat diagram. Explain each layer in detail.
+                </div>
+                <div class="question-header" style="margin-top: 10px;">
+                    <span class="question-number">(b)</span>
+                    <div class="question-marks">
+                        <span class="marks">5 Marks</span>
+                        <span class="bloom-level bt4">BT4</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Compare and contrast IaaS, PaaS, and SaaS with real-world examples.
+                </div>
+            </div>
+
+            <div class="or-separator">OR</div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">12.</span>
+                    <div class="question-marks">
+                        <span class="marks">10 Marks</span>
+                        <span class="bloom-level bt5">BT5</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Evaluate the advantages and disadvantages of Public, Private, and Hybrid Cloud deployment models. 
+                    Which model would you recommend for a healthcare organization? Justify your answer.
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">13. (a)</span>
+                    <div class="question-marks">
+                        <span class="marks">6 Marks</span>
+                        <span class="bloom-level bt2">BT2</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Explain the working of Virtual Machines and Containers in Cloud infrastructure.
+                </div>
+                <div class="question-header" style="margin-top: 10px;">
+                    <span class="question-number">(b)</span>
+                    <div class="question-marks">
+                        <span class="marks">4 Marks</span>
+                        <span class="bloom-level bt3">BT3</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Demonstrate the process of creating a Virtual Machine in any cloud platform.
+                </div>
+            </div>
+
+            <div class="or-separator">OR</div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">14.</span>
+                    <div class="question-marks">
+                        <span class="marks">10 Marks</span>
+                        <span class="bloom-level bt4">BT4</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Analyze the different virtualization techniques (Full Virtualization, Para-virtualization, 
+                    Hardware-assisted Virtualization). Discuss their performance implications.
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">15. (a)</span>
+                    <div class="question-marks">
+                        <span class="marks">5 Marks</span>
+                        <span class="bloom-level bt2">BT2</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Describe the data storage mechanisms in Cloud Computing (Block Storage, Object Storage, File Storage).
+                </div>
+                <div class="question-header" style="margin-top: 10px;">
+                    <span class="question-number">(b)</span>
+                    <div class="question-marks">
+                        <span class="marks">5 Marks</span>
+                        <span class="bloom-level bt3">BT3</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Apply the concept of data replication and fault tolerance in cloud storage systems.
+                </div>
+            </div>
+
+            <div class="or-separator">OR</div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">16.</span>
+                    <div class="question-marks">
+                        <span class="marks">10 Marks</span>
+                        <span class="bloom-level bt5">BT5</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Assess the security measures required for Cloud Computing. Discuss authentication, 
+                    authorization, and encryption techniques used in cloud platforms.
+                </div>
+            </div>
+        </div>
+
+        <!-- PART C -->
+        <div class="part-section">
+            <div class="part-header">PART - C (Case Study/Problem Solving - 2 × 20 = 40 Marks)</div>
+            <p style="font-size: 12px; margin-bottom: 15px;"><em>Answer any TWO questions. Each question carries 20 marks.</em></p>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">17.</span>
+                    <div class="question-marks">
+                        <span class="marks">20 Marks</span>
+                        <span class="bloom-level bt6">BT6</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    <strong>Case Study:</strong> A large e-commerce company wants to migrate its existing on-premise 
+                    infrastructure to the cloud to handle increasing traffic during festival seasons.
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(a)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Design a cloud architecture for the e-commerce platform including web servers, 
+                            application servers, and database servers.
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(b)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Propose auto-scaling strategies to handle traffic spikes during peak hours.
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(c)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Recommend appropriate cloud services (IaaS/PaaS/SaaS) for different components.
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(d)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Develop a disaster recovery plan for ensuring business continuity.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="or-separator">OR</div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">18.</span>
+                    <div class="question-marks">
+                        <span class="marks">20 Marks</span>
+                        <span class="bloom-level bt6">BT6</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Create a comprehensive cloud migration strategy for a banking application currently running 
+                    on legacy systems. Your solution should include:
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(a)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Migration approach (Lift-and-Shift, Re-platforming, or Re-architecting)
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(b)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Security and compliance considerations for financial data
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(c)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Cost optimization strategies using reserved instances and spot instances
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(d)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Performance monitoring and management framework
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">19.</span>
+                    <div class="question-marks">
+                        <span class="marks">20 Marks</span>
+                        <span class="bloom-level bt5">BT5</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Evaluate the implementation of a multi-cloud strategy for a global technology company:
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(a)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Compare AWS, Azure, and Google Cloud Platform capabilities
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(b)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Analyze vendor lock-in risks and mitigation strategies
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(c)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Design inter-cloud communication and data synchronization mechanisms
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(d)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Justify the choice of cloud providers for different workloads
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="or-separator">OR</div>
+
+            <div class="question">
+                <div class="question-header">
+                    <span class="question-number">20.</span>
+                    <div class="question-marks">
+                        <span class="marks">20 Marks</span>
+                        <span class="bloom-level bt6">BT6</span>
+                    </div>
+                </div>
+                <div class="question-text">
+                    Design and develop a serverless architecture for a real-time data analytics platform:
+                </div>
+                <div class="sub-questions">
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(a)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Create architecture using AWS Lambda, API Gateway, and DynamoDB
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(b)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Implement event-driven processing for streaming data
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(c)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Optimize function execution time and memory allocation
+                        </div>
+                    </div>
+                    <div class="sub-question">
+                        <div class="question-header">
+                            <span>(d)</span>
+                            <span class="marks">5 Marks</span>
+                        </div>
+                        <div class="question-text">
+                            Calculate cost benefits compared to traditional server-based architecture
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>*** END OF QUESTION PAPER ***</p>
+            <p style="margin-top: 10px;">Prepared by: Dr. K. Kalaivani | Department of CSE | © 2025</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin: 20px; padding: 20px;">
+        <button onclick="window.print()" style="background: #667eea; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-right: 10px;">
+            🖨️ Print Question Paper
+        </button>
+        <a href="index.html" style="background: #4caf50; color: white; text-decoration: none; padding: 12px 30px; border-radius: 5px; font-size: 16px; display: inline-block;">
+            ← Back to Website
+        </a>
+    </div>
+</body>
+</html>
