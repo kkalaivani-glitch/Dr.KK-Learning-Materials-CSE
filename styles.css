@@ -249,6 +249,22 @@ html {
     background: linear-gradient(135deg, #c8e6c9 0%, #66bb6a 50%, #43a047 100%);
 }
 
+.os-section {
+    background: linear-gradient(135deg, #ffccbc 0%, #ff8a65 50%, #f4511e 100%);
+}
+
+.networks-section {
+    background: linear-gradient(135deg, #b2dfdb 0%, #4db6ac 50%, #00897b 100%);
+}
+
+.oops-section {
+    background: linear-gradient(135deg, #d1c4e9 0%, #9575cd 50%, #673ab7 100%);
+}
+
+.ai-section {
+    background: linear-gradient(135deg, #f8bbd0 0%, #f06292 50%, #e91e63 100%);
+}
+
 .about-section {
     background: linear-gradient(135deg, #e1bee7 0%, #ba68c8 50%, #8e24aa 100%);
     color: white;

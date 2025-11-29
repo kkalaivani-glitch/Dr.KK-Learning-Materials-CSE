@@ -4,10 +4,17 @@ Personal academic website for Dr. K. Kalaivani, showcasing Computer Science Engi
 
 ## Subjects Covered
 
+### Core Subjects
 - ☁️ Cloud Computing
 - 🗄️ Database Management Systems (DBMS)
 - 🧮 Design & Analysis of Algorithms
 - 📊 Data Structures
+
+### Additional B.Tech CSE Subjects
+- 🖥️ Operating Systems
+- 🌐 Computer Networks
+- 🎯 Object Oriented Programming
+- 🤖 Artificial Intelligence & Machine Learning
 
 ## Features
 
