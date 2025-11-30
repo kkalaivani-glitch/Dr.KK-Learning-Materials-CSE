@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing Question Paper - CO & BT Mapping | Dr. K. Kalaivani</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .question-paper {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            border: 2px solid #000;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .university-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .dept-name {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .test-info {
+            font-size: 12px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .exam-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            margin: 15px 0;
+            font-size: 11px;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        .detail-row {
+            display: flex;
+            gap: 5px;
+        }
+
+        .detail-row strong {
+            min-width: 120px;
+        }
+
+        .co-list {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #000;
+            font-size: 10px;
+        }
+
+        .co-list p {
+            margin: 3px 0;
+            line-height: 1.3;
+        }
+
+        .part-header {
+            background: #000;
+            color: white;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 12px;
+            margin: 20px 0 10px 0;
+            text-align: center;
+        }
+
+        .questions-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 11px;
+        }
+
+        .questions-table th,
+        .questions-table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .questions-table th {
+            background: #f0f0f0;
+            font-weight: bold;
+        }
+
+        .question-text {
+            text-align: left;
+            padding: 10px;
+            line-height: 1.6;
+        }
+
+        .question-text p {
+            margin: 5px 0;
+        }
+
+        /* Charts Section */
+        .charts-section {
+            margin: 30px 0;
+            page-break-before: always;
+        }
+
+        .charts-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .chart-wrapper {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background: white;
+        }
+
+        .chart-title {
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Bloom's Bar Chart */
+        .bloom-bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 200px;
+            border-left: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding: 10px;
+            position: relative;
+        }
+
+        .y-axis {
+            position: absolute;
+            left: -30px;
+            top: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 9px;
+        }
+
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60px;
+        }
+
+        .bar {
+            width: 50px;
+            background: linear-gradient(to top, #4285f4, #7baaf7);
+            border: 1px solid #000;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .bar-label {
+            font-size: 9px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        /* CO Table */
+        .co-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+
+        .co-table th,
+        .co-table td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .co-table th {
+            background: #f0f0f0;
+        }
+
+        /* CO Bar Chart */
+        .co-bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 150px;
+            border-left: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        .co-bar {
+            width: 40px;
+            background: linear-gradient(to top, #34a853, #7cc97f);
+            border: 1px solid #000;
+            position: relative;
+        }
+
+        .footer-section {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            font-size: 11px;
+            border-top: 1px solid #000;
+            padding-top: 20px;
+        }
+
+        .footer-item {
+            text-align: center;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #4285f4;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        .back-link:hover {
+            background: #3367d6;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .question-paper {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .back-link {
+                display: none;
+            }
+        }
+
+        .legend {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+            font-size: 9px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .legend-box {
+            width: 15px;
+            height: 15px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="question-paper">
+        <!-- Header -->
+        <div class="header">
+            <div class="university-name">SR UNIVERSITY WARANGAL</div>
+            <div class="dept-name">DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</div>
+            <div class="test-info">SERIAL TEST 2</div>
+            <div class="test-info">25CS201PC302 - SOFTWARE ENGINEERING AND SYSTEM DESIGN</div>
+        </div>
+
+        <!-- Exam Details -->
+        <div class="exam-details">
+            <div class="detail-row">
+                <strong>Year/Sem/III/Regulation:</strong>
+                <span>II Year / IV Sem / R23</span>
+            </div>
+            <div class="detail-row">
+                <strong>Date of Exam:</strong>
+                <span>15-10-2025</span>
+            </div>
+            <div class="detail-row">
+                <strong>Time:</strong>
+                <span>2 PM to 3 PM</span>
+            </div>
+            <div class="detail-row">
+                <strong>Duration:</strong>
+                <span>1 Hour</span>
+            </div>
+            <div class="detail-row">
+                <strong>Max. Marks:</strong>
+                <span>20</span>
+            </div>
+        </div>
+
+        <!-- Course Outcomes -->
+        <div class="co-list">
+            <p><strong>CO1:</strong> Define core principles of software engineering, process models, and translate end-user requirements into functional specifications.</p>
+            <p><strong>CO2:</strong> Develop software modeling using the unified modeling language (such as use case diagrams, activity diagrams, class diagrams, sequence diagrams, and collaboration diagrams).</p>
+            <p><strong>CO3:</strong> Apply the testing strategies on different levels of implementation, compare quality assurance and develop a software quality assurance plan for a software development.</p>
+            <p><strong>CO4:</strong> Evaluate the system performance parameters such as scalability, availability, latency, throughput, and maintainability.</p>
+        </div>
+
+        <!-- Part A Header -->
+        <div class="part-header">PART-A (ANSWER ALL QUESTIONS) - 10*2=20</div>
+
+        <!-- Questions Table -->
+        <table class="questions-table">
+            <thead>
+                <tr>
+                    <th style="width: 8%;">Q NO</th>
+                    <th style="width: 60%;">Question</th>
+                    <th style="width: 10%;">MARKS</th>
+                    <th style="width: 10%;">CO</th>
+                    <th style="width: 12%;">BL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="question-text">
+                        <p>You are working as a Software Engineer at TechNova Software, a startup developing an Online Course Management System (OCMS) for universities. The development team follows the Agile Scrum methodology, consisting of a Product Owner, Scrum Master, Development Team, and QA Team. During the third sprint, the team faced multiple challenges including unclear user-functional requirements, uncontrolled dependencies in the OO repository, and frequent conflicts during merges. They adopted practices like Sprint Planning, Daily Stand-ups, Sprint Reviews, and Retrospectives. As a senior member, you recommend a Source Code Configuration Management (SCCM) model for the project. Justify your selection with clear reasoning. How could the clear identification of features, and clear documentation help to prevent the issues observed? Additionally, design a Use Case diagram that illustrates the primary actors, includes Admin, Faculty, Student, and System Admin roles.</p>
+                    </td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="height: 20px;"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="question-text">
+                        <p>As a Software Engineer at GeniusAI Technologies, your team is developing a Campus Management Web Application for a university. The software will integrate numerous features: facility reservation, facility information, activity information, class scheduling, attendance records, and communication. Features will be accessed through both web and mobile interfaces for students, faculty, and administration. As part of the Software Design and Implementation phase, your responsibility is to ensure that the application is modular, scalable, reusable, and maintainable. Your task is to illustrate the system design by drawing a Class Diagram or Sequence Diagram to show key object interactions between modules, such as Student, Faculty, and Course. Finally, recommend two suitable design patterns, one Creational and one Structural, and explain how these design patterns can be effectively implemented in the project to improve its modularity, maintainability, and readability.</p>
+                    </td>
+                    <td>10</td>
+                    <td>2</td>
+                    <td>6</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Bloom's Taxonomy and CO Analysis Section -->
+        <div class="charts-section">
+            <h2 style="text-align: center; margin-bottom: 30px; font-size: 16px;">Question Paper Analysis - Bloom's Taxonomy & Course Outcomes</h2>
+
+            <div class="charts-container">
+                <!-- Bloom's Level Wise Marks Distribution -->
+                <div class="chart-wrapper">
+                    <div class="chart-title">Bloom's Level wise marks distribution</div>
+                    <div class="bloom-bars">
+                        <div class="y-axis">
+                            <span>40</span>
+                            <span>35</span>
+                            <span>30</span>
+                            <span>25</span>
+                            <span>20</span>
+                            <span>15</span>
+                            <span>10</span>
+                            <span>5</span>
+                            <span>0</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar" style="height: 0px;">
+                                <div class="bar-value">0</div>
+                            </div>
+                            <div class="bar-label">Remembering</div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar" style="height: 0px;">
+                                <div class="bar-value">0</div>
+                            </div>
+                            <div class="bar-label">Understanding</div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar" style="height: 0px;">
+                                <div class="bar-value">0</div>
+                            </div>
+                            <div class="bar-label">Applying</div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar" style="height: 0px;">
+                                <div class="bar-value">0</div>
+                            </div>
+                            <div class="bar-label">Analyzing</div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar" style="height: 0px;">
+                                <div class="bar-value">0</div>
+                            </div>
+                            <div class="bar-label">Evaluating</div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar" style="height: 180px;">
+                                <div class="bar-value">38</div>
+                            </div>
+                            <div class="bar-label">Creating</div>
+                        </div>
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-box" style="background: #e3f2fd;"></div>
+                            <span>Remembering</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-box" style="background: #90caf9;"></div>
+                            <span>Understanding</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-box" style="background: #4285f4;"></div>
+                            <span>Applying</span>
+                        </div>
+                    </div>
+                    <div class="legend" style="margin-top: 5px;">
+                        <div class="legend-item">
+                            <div class="legend-box" style="background: #1976d2;"></div>
+                            <span>Analyzing</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-box" style="background: #0d47a1;"></div>
+                            <span>Evaluating</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-box" style="background: #7baaf7;"></div>
+                            <span>Creating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Outcome Wise Marks Distribution -->
+                <div class="chart-wrapper">
+                    <div class="chart-title">Course Outcome wise marks distribution</div>
+                    
+                    <!-- CO Table -->
+                    <table class="co-table">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">CO Number</th>
+                                <th colspan="6">Bloom's Taxonomy Levels</th>
+                                <th rowspan="2">Total</th>
+                            </tr>
+                            <tr>
+                                <th>Remembering<br>(1)</th>
+                                <th>Understanding<br>(2)</th>
+                                <th>Applying<br>(3)</th>
+                                <th>Analyzing<br>(4)</th>
+                                <th>Evaluating<br>(5)</th>
+                                <th>Creating<br>(6)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CO1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>10</td>
+                                <td><strong>10</strong></td>
+                            </tr>
+                            <tr>
+                                <td>CO2</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>10</td>
+                                <td><strong>10</strong></td>
+                            </tr>
+                            <tr>
+                                <td>CO3</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td><strong>0</strong></td>
+                            </tr>
+                            <tr>
+                                <td>CO4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td><strong>0</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- CO Bar Chart -->
+                    <div class="co-bars">
+                        <div class="bar-group">
+                            <div class="co-bar" style="height: 75px;">
+                                <div class="bar-value">10</div>
+                            </div>
+                            <div class="bar-label">CO1</div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="co-bar" style="height: 75px;">
+                                <div class="bar-value">10</div>
+                            </div>
+                            <div class="bar-label">CO2</div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="co-bar" style="height: 0px;">
+                                <div class="bar-value">0</div>
+                            </div>
+                            <div class="bar-label">CO3</div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="co-bar" style="height: 0px;">
+                                <div class="bar-value">0</div>
+                            </div>
+                            <div class="bar-label">CO4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-section">
+            <div class="footer-item">
+                <strong>Faculty Incharge</strong>
+                <div style="margin-top: 40px;">_________________</div>
+            </div>
+            <div class="footer-item">
+                <strong>Course Coordinator</strong>
+                <div style="margin-top: 40px;">_________________</div>
+            </div>
+            <div class="footer-item">
+                <strong>HOD CSE</strong>
+                <div style="margin-top: 40px;">_________________</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; font-size: 11px; color: #666;">
+            <p>*** END OF QUESTION PAPER ***</p>
+            <p style="margin-top: 10px;">Prepared by: Dr. K. Kalaivani | Department of CSE | © 2025</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin: 20px; padding: 20px;">
+        <button onclick="window.print()" style="background: #4285f4; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-right: 10px;">
+            🖨️ Print Question Paper
+        </button>
+        <a href="index.html" style="background: #34a853; color: white; text-decoration: none; padding: 12px 30px; border-radius: 5px; font-size: 16px; display: inline-block;">
+            ← Back to Website
+        </a>
+    </div>
+</body>
+</html>
