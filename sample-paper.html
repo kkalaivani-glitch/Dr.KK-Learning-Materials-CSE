@@ -266,6 +266,212 @@
             background: #764ba2;
         }
 
+        .bloom-chart-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .bloom-chart-section h3 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .charts-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .chart-wrapper {
+            text-align: center;
+        }
+
+        .chart-title {
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Pie Chart */
+        .pie-chart {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            background: conic-gradient(
+                #2196f3 0% 10%,
+                #03a9f4 10% 25%, 
+                #00bcd4 25% 45%,
+                #009688 45% 65%,
+                #4caf50 65% 85%,
+                #8bc34a 85% 100%
+            );
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .pie-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-weight: bold;
+        }
+
+        .pie-center .total {
+            font-size: 24px;
+            color: #667eea;
+        }
+
+        .pie-center .label {
+            font-size: 10px;
+            color: #666;
+        }
+
+        /* Bar Chart */
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 250px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 40px;
+        }
+
+        .bar-fill {
+            width: 100%;
+            background: linear-gradient(to top, #667eea, #764ba2);
+            border-radius: 5px 5px 0 0;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .bar-fill:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            font-size: 11px;
+            color: #333;
+            background: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .bar-label {
+            font-size: 10px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        /* Legend */
+        .chart-legend {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+
+        .legend-text {
+            flex: 1;
+        }
+
+        .legend-count {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        /* Statistics Table */
+        .stats-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        .stats-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .stats-table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stats-table tr:hover {
+            background: #f5f5ff;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
         @media print {
             .back-link {
                 display: none;
@@ -337,6 +543,198 @@
                 <li><span class="bloom-tag bt5">BT5</span> Evaluate - Justify a stand or decision</li>
                 <li><span class="bloom-tag bt6">BT6</span> Create - Produce new or original work</li>
             </ul>
+        </div>
+
+        <!-- Bloom's Taxonomy Distribution Charts -->
+        <div class="bloom-chart-section">
+            <h3>📊 Bloom's Taxonomy Distribution Analysis</h3>
+            
+            <div class="charts-container">
+                <!-- Pie Chart -->
+                <div class="chart-wrapper">
+                    <div class="chart-title">Question Distribution by Bloom's Level</div>
+                    <div class="pie-chart">
+                        <div class="pie-center">
+                            <div class="total">30</div>
+                            <div class="label">Total Questions</div>
+                        </div>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color bt1"></div>
+                            <span class="legend-text">BT1 (Remember)</span>
+                            <span class="legend-count">6 Q's</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color bt2"></div>
+                            <span class="legend-text">BT2 (Understand)</span>
+                            <span class="legend-count">9 Q's</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color bt3"></div>
+                            <span class="legend-text">BT3 (Apply)</span>
+                            <span class="legend-count">4 Q's</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color bt4"></div>
+                            <span class="legend-text">BT4 (Analyze)</span>
+                            <span class="legend-count">3 Q's</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color bt5"></div>
+                            <span class="legend-text">BT5 (Evaluate)</span>
+                            <span class="legend-count">4 Q's</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color bt6"></div>
+                            <span class="legend-text">BT6 (Create)</span>
+                            <span class="legend-count">4 Q's</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bar Chart -->
+                <div class="chart-wrapper">
+                    <div class="chart-title">Marks Distribution by Bloom's Level</div>
+                    <div class="bar-chart">
+                        <div class="bar">
+                            <div class="bar-fill" style="height: 48px;">
+                                <div class="bar-value">12</div>
+                            </div>
+                            <div class="bar-label">BT1</div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-fill" style="height: 96px;">
+                                <div class="bar-value">24</div>
+                            </div>
+                            <div class="bar-label">BT2</div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-fill" style="height: 72px;">
+                                <div class="bar-value">18</div>
+                            </div>
+                            <div class="bar-label">BT3</div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-fill" style="height: 60px;">
+                                <div class="bar-value">15</div>
+                            </div>
+                            <div class="bar-label">BT4</div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-fill" style="height: 84px;">
+                                <div class="bar-value">21</div>
+                            </div>
+                            <div class="bar-label">BT5</div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-fill" style="height: 120px;">
+                                <div class="bar-value">30</div>
+                            </div>
+                            <div class="bar-label">BT6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Table -->
+            <table class="stats-table">
+                <thead>
+                    <tr>
+                        <th>Bloom's Level</th>
+                        <th>Cognitive Domain</th>
+                        <th>No. of Questions</th>
+                        <th>Total Marks</th>
+                        <th>Percentage</th>
+                        <th>Distribution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="bloom-tag bt1">BT1</span></td>
+                        <td>Remember</td>
+                        <td>6</td>
+                        <td>12</td>
+                        <td>12%</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 12%;">12%</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="bloom-tag bt2">BT2</span></td>
+                        <td>Understand</td>
+                        <td>9</td>
+                        <td>24</td>
+                        <td>24%</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 24%;">24%</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="bloom-tag bt3">BT3</span></td>
+                        <td>Apply</td>
+                        <td>4</td>
+                        <td>18</td>
+                        <td>18%</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 18%;">18%</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="bloom-tag bt4">BT4</span></td>
+                        <td>Analyze</td>
+                        <td>3</td>
+                        <td>15</td>
+                        <td>15%</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%;">15%</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="bloom-tag bt5">BT5</span></td>
+                        <td>Evaluate</td>
+                        <td>4</td>
+                        <td>21</td>
+                        <td>21%</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 21%;">21%</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="bloom-tag bt6">BT6</span></td>
+                        <td>Create</td>
+                        <td>4</td>
+                        <td>30</td>
+                        <td>30%</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%;">30%</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="background: #f0f0f0; font-weight: bold;">
+                        <td colspan="2">TOTAL</td>
+                        <td>30</td>
+                        <td>120</td>
+                        <td>100%</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%; background: #4caf50;">100%</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <!-- Marks Distribution Table -->
